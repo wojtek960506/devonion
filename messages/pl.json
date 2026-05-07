@@ -1,6 +1,8 @@
 {
   "HomePage": {
     "title": "Cześć, jestem Wojtek.",
-    "description": "To jest pierwsza mała wersja devonion.com."
+    "description": "To jest pierwsza mała wersja devonion.com.",
+    "financePrompt": "Sprawdź mój pierwszy projekt.",
+    "financeCta": "Otwórz Śledzik Finansowy"
   }
 }

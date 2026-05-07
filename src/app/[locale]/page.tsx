@@ -22,6 +22,19 @@ export default async function HomePage({ params }: HomePageProps) {
         <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-300">
           {t("description")}
         </p>
+        <div className="mt-8">
+          <p className="mb-3 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+            {t("financePrompt")}
+          </p>
+          <a
+            className="flex w-full items-center justify-center rounded-2xl bg-zinc-900 px-5 py-3 text-xl font-semibold text-white transition-colors hover:bg-zinc-700 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
+            href="https://finance.devonion.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {t("financeCta")}
+          </a>
+        </div>
       </section>
     </main>
   );
