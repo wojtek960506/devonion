@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+html,
 :root {
   --dark-base: 35, 35, 35;
   --light-base: 235, 235, 235;
@@ -43,46 +44,44 @@
   --destructive-ring: oklch(0.64 0.16 25);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: rgba(var(--dark-base));
-    --fg: rgba(var(--light-base));
-    --hover: oklch(76.666% 0.00752 268.567);
-    --surface: oklch(0.24 0.02 260);
-    --text: oklch(0.95 0.01 260);
-    --text-muted: oklch(0.77 0.015 260);
-    --border: oklch(0.36 0.015 260);
-    --primary: oklch(0.71 0.16 255);
-    --primary-foreground: oklch(0.18 0.02 260);
+html.dark {
+  --bg: rgba(var(--dark-base));
+  --fg: rgba(var(--light-base));
+  --hover: oklch(76.666% 0.00752 268.567);
+  --surface: oklch(0.24 0.02 260);
+  --text: oklch(0.95 0.01 260);
+  --text-muted: oklch(0.77 0.015 260);
+  --border: oklch(0.36 0.015 260);
+  --primary: oklch(0.71 0.16 255);
+  --primary-foreground: oklch(0.18 0.02 260);
 
-    --card-bg: oklch(0.28 0.02 260);
+  --card-bg: oklch(0.28 0.02 260);
 
-    --modal-bg: rgba(60, 60, 60);
+  --modal-bg: rgba(60, 60, 60);
 
-    --bt-ghost-hover: rgba(var(--light-base), 0.2);
-    --bt-disabled: oklch(74.496% 0.01032 273.302);
+  --bt-ghost-hover: rgba(var(--light-base), 0.2);
+  --bt-disabled: oklch(74.496% 0.01032 273.302);
 
-    --bt-primary: oklch(0.72 0.16 150);
-    --bt-primary-hover: oklch(0.77 0.16 150);
-    --bt-primary-active: oklch(0.67 0.16 150);
-    --bt-primary-subtle: oklch(0.28 0.04 150);
-    --bt-primary-border: oklch(0.4 0.07 150);
-    --bt-primary-ring: oklch(0.75 0.17 150);
+  --bt-primary: oklch(0.72 0.16 150);
+  --bt-primary-hover: oklch(0.77 0.16 150);
+  --bt-primary-active: oklch(0.67 0.16 150);
+  --bt-primary-subtle: oklch(0.28 0.04 150);
+  --bt-primary-border: oklch(0.4 0.07 150);
+  --bt-primary-ring: oklch(0.75 0.17 150);
 
-    --bt-secondary: oklch(0.72 0.15 255);
-    --bt-secondary-hover: oklch(0.78 0.15 255);
-    --bt-secondary-active: oklch(0.66 0.16 255);
-    --bt-secondary-subtle: oklch(0.28 0.04 255);
-    --bt-secondary-border: oklch(0.4 0.07 255);
-    --bt-secondary-ring: oklch(0.75 0.16 255);
+  --bt-secondary: oklch(0.72 0.15 255);
+  --bt-secondary-hover: oklch(0.78 0.15 255);
+  --bt-secondary-active: oklch(0.66 0.16 255);
+  --bt-secondary-subtle: oklch(0.28 0.04 255);
+  --bt-secondary-border: oklch(0.4 0.07 255);
+  --bt-secondary-ring: oklch(0.75 0.16 255);
 
-    --destructive: oklch(0.62 0.16 25);
-    --destructive-hover: oklch(0.68 0.16 25);
-    --destructive-active: oklch(0.56 0.17 25);
-    --destructive-foreground: oklch(0.28 0.04 255);
-    --destructive-border: oklch(0.5 0.1 25);
-    --destructive-ring: oklch(0.7 0.16 25);
-  }
+  --destructive: oklch(0.62 0.16 25);
+  --destructive-hover: oklch(0.68 0.16 25);
+  --destructive-active: oklch(0.56 0.17 25);
+  --destructive-foreground: oklch(0.28 0.04 255);
+  --destructive-border: oklch(0.5 0.1 25);
+  --destructive-ring: oklch(0.7 0.16 25);
 }
 
 @theme inline {
@@ -133,10 +132,8 @@
     color-scheme: light;
   }
 
-  @media (prefers-color-scheme: dark) {
-    html {
-      color-scheme: dark;
-    }
+  html.dark {
+    color-scheme: dark;
   }
 
   body {

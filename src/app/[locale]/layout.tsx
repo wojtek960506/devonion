@@ -3,7 +3,7 @@ import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { LocaleSwitcher } from "@/components/locale-switcher";
-import { ThemeSwitcherPreview } from "@/components/theme-switcher-preview";
+import { ThemeButton } from "@/components/theme/theme-button";
 import { isValidLocale, routing } from "@/i18n/routing";
 import clsx from "clsx";
 
@@ -56,7 +56,7 @@ export default async function LocaleLayout({
             </div>
             <div className="flex flex-wrap gap-3">
               <LocaleSwitcher />
-              <ThemeSwitcherPreview />
+              <ThemeButton />
             </div>
           </div>
         </header>

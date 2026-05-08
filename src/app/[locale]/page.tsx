@@ -20,7 +20,7 @@ export default async function HomePage({ params }: HomePageProps) {
         <div className="mb-5 flow-root">
           <div className={clsx(
             "float-right mb-2  ml-4 w-fit rounded-3xl border border-border",
-            "bg-surface px-2 py-2"
+            "bg-bg px-2 py-2"
           )}>
             <Image
               alt="DevOnion main logo"
