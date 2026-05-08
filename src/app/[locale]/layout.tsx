@@ -29,17 +29,17 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider>
-      <div className="min-h-screen bg-bg">
+      <div className="min-h-screen min-w-[360px] bg-bg">
         <header className={clsx(
           "border-b border-border bg-bg/90 px-4 py-3 backdrop-blur sm:px-8"
         )}>
           <div className={clsx(
-            "flex w-full flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"
+            "flex w-full gap-5 flex-row items-center justify-between"
           )}>
             <div className="flex items-center gap-4">
               <Image
                 alt="DevOnion text logo"
-                className="h-10 w-auto sm:h-14"
+                className="hidden h-10 w-auto sm:block sm:h-14"
                 height={36}
                 src="/brand/DEVONION-LOGO.svg"
                 style={{ width: "auto" }}
@@ -54,7 +54,7 @@ export default async function LocaleLayout({
                 width={216}
               />
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex ">
               <LocaleSwitcher />
               <ThemeButton />
             </div>

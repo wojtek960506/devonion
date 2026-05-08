@@ -13,7 +13,7 @@ export default async function HomePage({ params }: HomePageProps) {
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return (
-    <main className="min-w-[360px] px-6 py-10 sm:px-8 sm:py-12">
+    <main className="px-6 py-10 sm:px-8 sm:py-12">
       <section className={clsx(
         "mx-auto w-full max-w-3xl rounded-3xl bg-card-bg p-8 shadow-sm sm:p-10"
       )}>
