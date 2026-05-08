@@ -13,37 +13,35 @@ export default async function HomePage({ params }: HomePageProps) {
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return (
-    <main className="px-6 py-10 sm:px-8 sm:py-12">
+    <main className="min-w-[360px] px-6 py-10 sm:px-8 sm:py-12">
       <section className={clsx(
         "mx-auto w-full max-w-3xl rounded-3xl bg-card-bg p-8 shadow-sm sm:p-10"
       )}>
-        <div className="flex justify-between mb-5 gap-2">
-          <div>
-            <h1 className="text-3xl font-semibold text-text">
-              {t("title")}
-            </h1>
-            <p className="mt-4 text-lg text-text-muted">
-              {t("description")}
-            </p>
-          </div>
+        <div className="mb-5 flow-root">
           <div className={clsx(
-            "w-fit flex flex-col items-center gap-4 rounded-3xl border",
-            "border-border bg-surface px-6 py-6"
+            "float-right mb-2  ml-4 w-fit rounded-3xl border border-border",
+            "bg-surface px-2 py-2"
           )}>
             <Image
               alt="DevOnion main logo"
-              className="h-auto w-auto object-contain sm:max-w-56"
-              height={180}
-              width={180}
+              className="h-auto w-auto max-w-28 object-contain sm:max-w-56"
               fetchPriority="high"
+              height={180}
               sizes="(max-width: 180px) 100vw, 180px"
               src="/brand/DEVONION-LOGO.svg"
-              
+              width={180}
             />
           </div>
+
+          <h1 className="text-[1.75rem] font-semibold text-text sm:text-4xl">
+            {t("title")}
+          </h1>
+          <p className="mt-4 text-base leading-6 text-text-muted [text-align:justify] sm:text-lg sm:leading-7">
+            {t("description")}
+          </p>
         </div>
 
-        <p className="mb-3 text-base font-semibold text-text">
+        <p className="mt-10 mb-4 text-lg font-semibold text-text sm:text-xl">
           {t("financePrompt")}
         </p>
         <AnchorButton
@@ -55,7 +53,6 @@ export default async function HomePage({ params }: HomePageProps) {
         >
           {t("financeCta")}
         </AnchorButton>
-        
       </section>
     </main>
   );
