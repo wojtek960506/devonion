@@ -3,14 +3,12 @@ import clsx from "clsx";
 export function ThemeSwitcherPreview() {
   return (
     <div className={clsx(
-      "flex gap-1 rounded-full border border-zinc-300 bg-white/80 p-1 shadow-sm backdrop-blur",
-      "dark:border-zinc-700 dark:bg-zinc-900/80"
+      "flex gap-1 rounded-full border border-border bg-card-bg p-1 shadow-sm backdrop-blur"
     )}>
       <button
         aria-label="Light theme preview"
         className={clsx(
-          "rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white dark:bg-white",
-          "dark:text-black"
+          "rounded-full bg-fg px-4 py-2 text-sm font-medium text-bg"
         )}
         type="button"
       >
@@ -18,7 +16,7 @@ export function ThemeSwitcherPreview() {
       </button>
       <button
         aria-label="Dark theme preview"
-        className="rounded-full px-4 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-200"
+        className="rounded-full px-4 py-2 text-sm font-medium text-text-muted"
         type="button"
       >
         Dark

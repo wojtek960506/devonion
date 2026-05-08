@@ -29,10 +29,9 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider>
-      <div className="min-h-screen bg-zinc-50 dark:bg-black">
+      <div className="min-h-screen bg-bg">
         <header className={clsx(
-          "border-b border-zinc-200 bg-white/90 px-6 py-5 backdrop-blur dark:border-zinc-800",
-          "dark:bg-zinc-950/90 sm:px-8"
+          "border-b border-border bg-bg/90 px-6 py-5 backdrop-blur sm:px-8"
         )}>
           <div className="flex w-full flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
             <div className="flex items-center gap-4">
@@ -40,7 +39,6 @@ export default async function LocaleLayout({
                 alt="DevOnion text logo"
                 className="h-10 w-auto sm:h-14"
                 height={36}
-                priority
                 src="/brand/DEVONION-LOGO.svg"
                 style={{ width: "auto" }}
                 width={36}
@@ -49,7 +47,6 @@ export default async function LocaleLayout({
                 alt="DevOnion text logo"
                 className="h-10 w-auto sm:h-14"
                 height={36}
-                priority
                 src="/brand/DEVONION-TEXT.svg"
                 style={{ width: "auto" }}
                 width={216}
