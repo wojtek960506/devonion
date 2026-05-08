@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { LocaleSwitcher } from "@/components/locale-switcher";
+import clsx from "clsx";
+import { AnchorButton } from "@/components/ui/button";
 
 type HomePageProps = Readonly<{
   params: Promise<{ locale: string }>;
@@ -7,34 +9,50 @@ type HomePageProps = Readonly<{
 
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
-
   setRequestLocale(locale);
-
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-zinc-50 px-6 dark:bg-black">
-      <section className="w-full max-w-2xl rounded-3xl bg-white p-10 shadow-sm dark:bg-zinc-900">
-        <LocaleSwitcher />
-        <h1 className="text-3xl font-semibold text-black dark:text-zinc-50">
-          {t("title")}
-        </h1>
-        <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-300">
-          {t("description")}
-        </p>
-        <div className="mt-8">
-          <p className="mb-3 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-            {t("financePrompt")}
+    <main className="px-6 py-10 sm:px-8 sm:py-12">
+      <section className={clsx(
+        "mx-auto w-full max-w-3xl rounded-3xl bg-card-bg p-8 shadow-sm sm:p-10"
+      )}>
+        <div className="mb-5 flow-root">
+          <div className={clsx(
+            "float-right mb-2  ml-4 w-fit rounded-3xl border border-border",
+            "bg-bg px-2 py-2"
+          )}>
+            <Image
+              alt="DevOnion main logo"
+              className="h-auto w-auto max-w-28 object-contain sm:max-w-56"
+              fetchPriority="high"
+              height={180}
+              sizes="(max-width: 180px) 100vw, 180px"
+              src="/brand/DEVONION-LOGO.svg"
+              width={180}
+            />
+          </div>
+
+          <h1 className="text-[1.75rem] font-semibold text-text sm:text-4xl">
+            {t("title")}
+          </h1>
+          <p className="mt-4 text-base leading-6 text-text-muted [text-align:justify] sm:text-lg sm:leading-7">
+            {t("description")}
           </p>
-          <a
-            className="flex w-full items-center justify-center rounded-2xl bg-zinc-900 px-5 py-3 text-xl font-semibold text-white transition-colors hover:bg-zinc-700 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
-            href="https://finance.devonion.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            {t("financeCta")}
-          </a>
         </div>
+
+        <p className="mt-10 mb-4 text-lg font-semibold text-text sm:text-xl">
+          {t("financePrompt")}
+        </p>
+        <AnchorButton
+          href="https://finance.devonion.com"
+          rel="noopener noreferrer"
+          target="_blank"
+          variant="default"
+          className="font-semibold"
+        >
+          {t("financeCta")}
+        </AnchorButton>
       </section>
     </main>
   );
