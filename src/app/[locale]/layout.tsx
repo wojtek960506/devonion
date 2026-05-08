@@ -1,7 +1,11 @@
 import { NextIntlClientProvider } from "next-intl";
+import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { LocaleSwitcher } from "@/components/locale-switcher";
+import { ThemeSwitcherPreview } from "@/components/theme-switcher-preview";
 import { isValidLocale, routing } from "@/i18n/routing";
+import clsx from "clsx";
 
 type LocaleLayoutProps = Readonly<{
   children: React.ReactNode;
@@ -23,5 +27,43 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  return <NextIntlClientProvider>{children}</NextIntlClientProvider>;
+  return (
+    <NextIntlClientProvider>
+      <div className="min-h-screen bg-zinc-50 dark:bg-black">
+        <header className={clsx(
+          "border-b border-zinc-200 bg-white/90 px-6 py-5 backdrop-blur dark:border-zinc-800",
+          "dark:bg-zinc-950/90 sm:px-8"
+        )}>
+          <div className="flex w-full flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+            <div className="flex items-center gap-4">
+              <Image
+                alt="DevOnion text logo"
+                className="h-10 w-auto sm:h-14"
+                height={36}
+                priority
+                src="/brand/DEVONION-LOGO.svg"
+                style={{ width: "auto" }}
+                width={36}
+              />
+              <Image
+                alt="DevOnion text logo"
+                className="h-10 w-auto sm:h-14"
+                height={36}
+                priority
+                src="/brand/DEVONION-TEXT.svg"
+                style={{ width: "auto" }}
+                width={216}
+              />
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <LocaleSwitcher />
+              <ThemeSwitcherPreview />
+            </div>
+          </div>
+        </header>
+
+        {children}
+      </div>
+    </NextIntlClientProvider>
+  );
 }
