@@ -31,9 +31,11 @@ export default async function LocaleLayout({
     <NextIntlClientProvider>
       <div className="min-h-screen bg-bg">
         <header className={clsx(
-          "border-b border-border bg-bg/90 px-6 py-5 backdrop-blur sm:px-8"
+          "border-b border-border bg-bg/90 px-4 py-3 backdrop-blur sm:px-8"
         )}>
-          <div className="flex w-full flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+          <div className={clsx(
+            "flex w-full flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"
+          )}>
             <div className="flex items-center gap-4">
               <Image
                 alt="DevOnion text logo"

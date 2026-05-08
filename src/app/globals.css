@@ -16,6 +16,8 @@
 
   --card-bg: oklch(0.985 0.005 260);
 
+  --modal-bg: rgba(215, 215, 215);
+
   --bt-ghost-hover: rgba(var(--dark-base), 0.2);
   --bt-disabled: oklch(47.837% 0.04176 258.846);
 
@@ -55,6 +57,8 @@
 
     --card-bg: oklch(0.28 0.02 260);
 
+    --modal-bg: rgba(60, 60, 60);
+
     --bt-ghost-hover: rgba(var(--light-base), 0.2);
     --bt-disabled: oklch(74.496% 0.01032 273.302);
 
@@ -93,6 +97,8 @@
   --color-primary-foreground: var(--primary-foreground);
 
   --color-card-bg: var(--card-bg);
+
+  --color-modal-bg: var(--modal-bg);
 
   --color-bt-ghost-hover: var(--bt-ghost-hover);
   --color-bt-disabled: var(--bt-disabled);

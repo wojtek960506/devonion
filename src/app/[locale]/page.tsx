@@ -9,9 +9,7 @@ type HomePageProps = Readonly<{
 
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
-
   setRequestLocale(locale);
-
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return (
@@ -19,48 +17,45 @@ export default async function HomePage({ params }: HomePageProps) {
       <section className={clsx(
         "mx-auto w-full max-w-3xl rounded-3xl bg-card-bg p-8 shadow-sm sm:p-10"
       )}>
-        <div className={clsx(
-          "mb-10 flex flex-col items-center gap-8 rounded-3xl border border-border bg-surface",
-          "px-6 py-10 sm:px-10 sm:py-14"
-        )}>
-          <Image
-            alt="DevOnion main logo"
-            className="h-auto w-full max-w-md object-contain sm:max-w-lg"
-            height={640}
-            fetchPriority="high"
-            sizes="(max-width: 640px) 100vw, 640px"
-            src="/brand/DEVONION-LOGO.svg"
-            width={640}
-          />
-          <Image
-            alt="DevOnion wordmark"
-            className="h-auto w-full max-w-2xl object-contain"
-            height={180}
-            sizes="(max-width: 640px) 100vw, 960px"
-            src="/brand/DEVONION-TEXT.svg"
-            width={960}
-          />
+        <div className="flex justify-between mb-5 gap-2">
+          <div>
+            <h1 className="text-3xl font-semibold text-text">
+              {t("title")}
+            </h1>
+            <p className="mt-4 text-lg text-text-muted">
+              {t("description")}
+            </p>
+          </div>
+          <div className={clsx(
+            "w-fit flex flex-col items-center gap-4 rounded-3xl border",
+            "border-border bg-surface px-6 py-6"
+          )}>
+            <Image
+              alt="DevOnion main logo"
+              className="h-auto w-auto object-contain sm:max-w-56"
+              height={180}
+              width={180}
+              fetchPriority="high"
+              sizes="(max-width: 180px) 100vw, 180px"
+              src="/brand/DEVONION-LOGO.svg"
+              
+            />
+          </div>
         </div>
-        <h1 className="text-3xl font-semibold text-text">
-          {t("title")}
-        </h1>
-        <p className="mt-4 text-lg text-text-muted">
-          {t("description")}
+
+        <p className="mb-3 text-base font-semibold text-text">
+          {t("financePrompt")}
         </p>
-        <div className="mt-8">
-          <p className="mb-3 text-base font-semibold text-text">
-            {t("financePrompt")}
-          </p>
-          <AnchorButton
-            href="https://finance.devonion.com"
-            rel="noopener noreferrer"
-            target="_blank"
-            variant="default"
-            className="font-semibold"
-          >
-            {t("financeCta")}
-          </AnchorButton>
-        </div>
+        <AnchorButton
+          href="https://finance.devonion.com"
+          rel="noopener noreferrer"
+          target="_blank"
+          variant="default"
+          className="font-semibold"
+        >
+          {t("financeCta")}
+        </AnchorButton>
+        
       </section>
     </main>
   );
