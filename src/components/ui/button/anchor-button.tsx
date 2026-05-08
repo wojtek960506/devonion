@@ -3,20 +3,20 @@ import { type ComponentProps, forwardRef } from "react";
 import { getButtonClassName } from "./get-button-class-name";
 import type { ButtonVariant } from "./types";
 
-type ButtonProps = ComponentProps<"button"> & {
+type AnchorButtonProps = ComponentProps<"a"> & {
   variant?: ButtonVariant;
 };
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const AnchorButton = forwardRef<HTMLAnchorElement, AnchorButtonProps>(
   ({ variant, className, children, ...props }, ref) => (
-    <button
+    <a
       {...props}
-      ref={ref}
       className={getButtonClassName({ variant, className })}
+      ref={ref}
     >
       {children}
-    </button>
+    </a>
   ),
 );
 
-Button.displayName = "Button";
+AnchorButton.displayName = "AnchorButton";

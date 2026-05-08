@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import clsx from "clsx";
+import { AnchorButton } from "@/components/ui/button";
 
 type HomePageProps = Readonly<{
   params: Promise<{ locale: string }>;
@@ -50,17 +51,15 @@ export default async function HomePage({ params }: HomePageProps) {
           <p className="mb-3 text-base font-semibold text-text">
             {t("financePrompt")}
           </p>
-          <a
-            className={clsx(
-              "flex w-full items-center justify-center rounded-2xl border border-transparent bg-fg",
-              "px-5 py-3 text-xl font-semibold text-bg transition-colors hover:bg-hover"
-            )}
+          <AnchorButton
             href="https://finance.devonion.com"
             rel="noopener noreferrer"
             target="_blank"
+            variant="default"
+            className="font-semibold"
           >
             {t("financeCta")}
-          </a>
+          </AnchorButton>
         </div>
       </section>
     </main>

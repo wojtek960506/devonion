@@ -1,22 +1,23 @@
 import { type ComponentProps, forwardRef } from "react";
+import Link from "next/link";
 
 import { getButtonClassName } from "./get-button-class-name";
 import type { ButtonVariant } from "./types";
 
-type ButtonProps = ComponentProps<"button"> & {
+type LinkButtonProps = ComponentProps<typeof Link> & {
   variant?: ButtonVariant;
 };
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps>(
   ({ variant, className, children, ...props }, ref) => (
-    <button
+    <Link
       {...props}
-      ref={ref}
       className={getButtonClassName({ variant, className })}
+      ref={ref}
     >
       {children}
-    </button>
+    </Link>
   ),
 );
 
-Button.displayName = "Button";
+LinkButton.displayName = "LinkButton";
