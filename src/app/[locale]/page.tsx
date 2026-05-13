@@ -28,11 +28,20 @@ export default async function HomePage({ params }: HomePageProps) {
             )}>
               <Image
                 alt="DevOnion main logo"
-                className="h-auto w-auto max-w-28 object-contain sm:max-w-56"
+                className="h-auto w-auto max-w-28 object-contain sm:max-w-56 dark:hidden"
                 fetchPriority="high"
                 height={180}
                 sizes="(max-width: 180px) 100vw, 180px"
                 src="/brand/DEVONION-LOGO.svg"
+                width={180}
+              />
+              <Image
+                alt="DevOnion main logo"
+                className="hidden h-auto w-auto max-w-28 object-contain dark:block sm:max-w-56"
+                fetchPriority="high"
+                height={180}
+                sizes="(max-width: 180px) 100vw, 180px"
+                src="/brand/DEVONION-LOGO-DARK.svg"
                 width={180}
               />
             </div>
@@ -51,7 +60,8 @@ export default async function HomePage({ params }: HomePageProps) {
           rel="noopener noreferrer"
           target="_blank"
           variant="primary"
-          className="font-semibold"
+          className="font-semibold text-bg"
+
         >
           {t("financeCta")}
         </AnchorButton>
