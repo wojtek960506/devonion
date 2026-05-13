@@ -13,42 +13,44 @@ export default async function HomePage({ params }: HomePageProps) {
   const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return (
-    <main className="px-6 py-10 sm:px-8 sm:py-12">
+    <main className="p-5 sm:p-7">
       <section className={clsx(
-        "mx-auto w-full max-w-3xl rounded-3xl bg-card-bg p-8 shadow-sm sm:p-10"
+        "mx-auto w-full max-w-3xl rounded-3xl bg-card-bg p-5 shadow-sm sm:p-7"
       )}>
-        <div className="mb-5 flow-root">
-          <div className={clsx(
-            "float-right mb-2  ml-4 w-fit rounded-3xl border border-border",
-            "bg-bg px-2 py-2"
-          )}>
-            <Image
-              alt="DevOnion main logo"
-              className="h-auto w-auto max-w-28 object-contain sm:max-w-56"
-              fetchPriority="high"
-              height={180}
-              sizes="(max-width: 180px) 100vw, 180px"
-              src="/brand/DEVONION-LOGO.svg"
-              width={180}
-            />
-          </div>
-
-          <h1 className="text-[1.75rem] font-semibold text-text sm:text-4xl">
+        <div className="mb-5">
+          <h1 className="mb-2 text-xl font-semibold text-text sm:mb-3 sm:text-3xl">
             {t("title")}
           </h1>
-          <p className="mt-4 text-base leading-6 text-text-muted [text-align:justify] sm:text-lg sm:leading-7">
-            {t("description")}
-          </p>
+
+          <div className="flow-root">
+            <div className={clsx(
+              "float-right mb-2 ml-4 w-fit rounded-3xl border border-border bg-bg px-2 py-2"
+            )}>
+              <Image
+                alt="DevOnion main logo"
+                className="h-auto w-auto max-w-28 object-contain sm:max-w-56"
+                fetchPriority="high"
+                height={180}
+                sizes="(max-width: 180px) 100vw, 180px"
+                src="/brand/DEVONION-LOGO.svg"
+                width={180}
+              />
+            </div>
+
+            <p className="text-base leading-6 text-text-muted [hyphens:auto] [overflow-wrap:break-word] [text-align:justify] sm:text-xl sm:leading-7">
+              {t("description")}
+            </p>
+          </div>
         </div>
 
-        <p className="mt-10 mb-4 text-lg font-semibold text-text sm:text-xl">
+        <p className="mt-3 sm:mt-4 mb-1 sm:mb-2 text-base font-semibold text-text sm:text-lg">
           {t("financePrompt")}
         </p>
         <AnchorButton
           href="https://finance.devonion.com"
           rel="noopener noreferrer"
           target="_blank"
-          variant="default"
+          variant="primary"
           className="font-semibold"
         >
           {t("financeCta")}

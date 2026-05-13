@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "DevOnion",
-  description: "DevOnion is a personal portfolio and home for projects, experiments, and ideas by Your Name.",
+  description: "DevOnion is a personal portfolio and home for projects, experiments and ideas by Wojciech Zieliński.",
 };
 
 export default async function RootLayout({

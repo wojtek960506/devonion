@@ -18,7 +18,7 @@ export const getButtonClassName = ({
     case 'primary':
       variantClassName = clsx(
         'bg-bt-primary text-bt-primary-subtle border-bt-primary-border',
-        'hover:bg-bt-primary-hover',
+        'hover:bg-bt-primary-hover active:bg-bt-primary-active',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bt-primary-ring',
       );
       break;

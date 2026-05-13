@@ -31,7 +31,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider>
       <div className="min-h-screen min-w-[360px] bg-bg">
         <header className={clsx(
-          "border-b border-border bg-bg/90 px-4 py-3 backdrop-blur sm:px-8"
+          "border-b border-border bg-bg/90 px-5 py-3 backdrop-blur sm:px-7"
         )}>
           <div className={clsx(
             "flex w-full gap-5 flex-row items-center justify-between"

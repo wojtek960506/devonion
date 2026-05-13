@@ -1,7 +1,7 @@
 {
   "HomePage": {
     "title": "Hi, I'm Wojtek.",
-    "description": "This is the first small version of devonion.com, a personal place for my projects, ideas, and experiments. I enjoy building full stack systems that help users with everyday tasks, remove unnecessary friction, and make real workflows simpler and more intuitive. I care a lot about practical software: tools that are clear, reliable, and genuinely useful instead of just technically interesting. Outside of coding, I like a good mix of activity and focus: hiking in the mountains, climbing, riding a bike, calisthenics, motorcycle rides, and playing piano.",
+    "description": "This is the first small version of DevOnion - a personal place for my projects, ideas and experiments. I enjoy building full stack systems that help users with everyday tasks, remove unnecessary friction and make real workflows simpler and more intuitive. I care a lot about practical software: tools that are clear, reliable and genuinely useful instead of just technically interesting. Outside of coding, I like a good mix of activity and focus: hiking in the mountains, climbing, riding a bike, calisthenics, motorcycle rides and playing piano.",
     "financePrompt": "Check out my first project.",
     "financeCta": "Open Finance Tracker"
   }
