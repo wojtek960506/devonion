@@ -8,7 +8,7 @@ export const THEME_STORE_KEY = "devonion-theme";
 
 const getPreferredTheme = (): Theme => {
   if (typeof window === "undefined") {
-    return "light";
+    return "dark";
   }
 
   const storedTheme = window.localStorage.getItem(THEME_STORE_KEY);
@@ -22,7 +22,7 @@ const getPreferredTheme = (): Theme => {
 };
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   // TODO - fix it sometime
   useEffect(() => {

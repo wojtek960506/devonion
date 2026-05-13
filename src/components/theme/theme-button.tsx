@@ -18,9 +18,9 @@ export const ThemeButton = () => {
       variant="ghost"
     >
       {theme === "dark" ? (
-        <Sun className={ICON_CLASS_NAME} />
+        <Sun className={ICON_CLASS_NAME} strokeWidth={1.5}/>
       ) : (
-        <Moon className={ICON_CLASS_NAME} />
+        <Moon className={ICON_CLASS_NAME} strokeWidth={1.5}/>
       )}
     </Button>
   );
