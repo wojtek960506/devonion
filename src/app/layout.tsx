@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import "./globals.css";
 import { isValidLocale, routing } from "@/i18n/routing";
@@ -19,6 +20,25 @@ export const metadata: Metadata = {
   description: "DevOnion is a personal portfolio and home for projects, experiments and ideas by Wojciech Zieliński.",
 };
 
+const themeInitScript = `
+(function() {
+  try {
+    var key = "devonion-theme";
+    var storedTheme = window.localStorage.getItem(key);
+    var theme = storedTheme === "light" || storedTheme === "dark"
+      ? storedTheme
+      : window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+
+    var root = document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+    root.style.colorScheme = theme;
+  } catch (error) {}
+})();
+`;
+
 export default async function RootLayout({
   children,
   params,
@@ -35,6 +55,11 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} light h-full antialiased`}
       suppressHydrationWarning
     >
+      <head>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeInitScript}
+        </Script>
+      </head>
       <body className="min-h-full flex flex-col">
         <ThemeProvider>{children}</ThemeProvider>
       </body>

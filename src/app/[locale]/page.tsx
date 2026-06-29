@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import clsx from "clsx";
-import { AnchorButton } from "@/components/ui/button";
+import { AnchorButton, LinkButton } from "@/components/ui/button";
 
 type HomePageProps = Readonly<{
   params: Promise<{ locale: string }>;
@@ -59,10 +59,20 @@ export default async function HomePage({ params }: HomePageProps) {
           target="_blank"
           variant="primary"
           className="font-semibold text-bg"
-
         >
           {t("financeCta")}
         </AnchorButton>
+
+        <p className="mt-5 mb-1 sm:mb-2 text-base font-semibold text-text sm:text-lg">
+          {t("cvPrompt")}
+        </p>
+        <LinkButton
+          href={`/${locale}/cv`}
+          variant="outline"
+          className="font-semibold"
+        >
+          {t("cvCta")}
+        </LinkButton>
       </section>
     </main>
   );
