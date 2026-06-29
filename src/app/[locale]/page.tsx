@@ -24,24 +24,22 @@ export default async function HomePage({ params }: HomePageProps) {
 
           <div className="flow-root">
             <div className={clsx(
-              "float-right mb-2 ml-4 w-fit rounded-3xl border border-border bg-bg px-2 py-2"
+              "float-right mb-2 ml-4 w-28 rounded-3xl border border-border bg-bg px-2 py-2 sm:w-56"
             )}>
               <Image
                 alt="DevOnion main logo"
-                className="h-auto w-auto max-w-28 object-contain sm:max-w-56 dark:hidden"
-                fetchPriority="high"
+                className="block h-auto w-full object-contain dark:hidden"
                 height={180}
-                sizes="(max-width: 180px) 100vw, 180px"
                 src="/brand/DEVONION-LOGO.svg"
+                unoptimized
                 width={180}
               />
               <Image
                 alt="DevOnion main logo"
-                className="hidden h-auto w-auto max-w-28 object-contain dark:block sm:max-w-56"
-                fetchPriority="high"
+                className="hidden h-auto w-full object-contain dark:block"
                 height={180}
-                sizes="(max-width: 180px) 100vw, 180px"
                 src="/brand/DEVONION-LOGO-DARK.svg"
+                unoptimized
                 width={180}
               />
             </div>

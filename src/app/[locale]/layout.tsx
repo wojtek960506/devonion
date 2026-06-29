@@ -42,7 +42,7 @@ export default async function LocaleLayout({
                 className="hidden h-10 w-auto sm:block sm:h-14 dark:hidden"
                 height={36}
                 src="/brand/DEVONION-LOGO.svg"
-                style={{ width: "auto" }}
+                unoptimized
                 width={36}
               />
               <Image
@@ -50,7 +50,7 @@ export default async function LocaleLayout({
                 className="hidden h-10 w-auto sm:dark:block sm:h-14"
                 height={36}
                 src="/brand/DEVONION-LOGO-DARK.svg"
-                style={{ width: "auto" }}
+                unoptimized
                 width={36}
               />
               <Image
@@ -58,7 +58,7 @@ export default async function LocaleLayout({
                 className="h-10 w-auto sm:h-14 dark:hidden"
                 height={36}
                 src="/brand/DEVONION-TEXT.svg"
-                style={{ width: "auto" }}
+                unoptimized
                 width={216}
               />
               <Image
@@ -66,7 +66,7 @@ export default async function LocaleLayout({
                 className="hidden h-10 w-auto dark:block sm:h-14"
                 height={36}
                 src="/brand/DEVONION-TEXT-DARK.svg"
-                style={{ width: "auto" }}
+                unoptimized
                 width={216}
               />
             </div>
