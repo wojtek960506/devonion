@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { ThemeButton } from "@/components/theme/theme-button";
 import { isValidLocale, routing } from "@/i18n/routing";
@@ -36,40 +37,31 @@ export default async function LocaleLayout({
           <div className={clsx(
             "flex w-full gap-5 flex-row items-center justify-between"
           )}>
-            <div className="flex items-center gap-4">
-              <Image
-                alt="DevOnion text logo"
-                className="hidden h-10 w-auto sm:block sm:h-14 dark:hidden"
-                height={36}
-                src="/brand/DEVONION-LOGO.svg"
-                unoptimized
-                width={36}
-              />
-              <Image
-                alt="DevOnion text logo"
-                className="hidden h-10 w-auto sm:dark:block sm:h-14"
-                height={36}
-                src="/brand/DEVONION-LOGO-DARK.svg"
-                unoptimized
-                width={36}
-              />
-              <Image
-                alt="DevOnion text logo"
-                className="h-10 w-auto sm:h-14 dark:hidden"
-                height={36}
-                src="/brand/DEVONION-TEXT.svg"
-                unoptimized
-                width={216}
-              />
-              <Image
-                alt="DevOnion text logo"
-                className="hidden h-10 w-auto dark:block sm:h-14"
-                height={36}
-                src="/brand/DEVONION-TEXT-DARK.svg"
-                unoptimized
-                width={216}
-              />
-            </div>
+            <Link
+              href={`/${locale}`}
+              className="flex items-center gap-3"
+              aria-label="DevOnion home"
+            >
+              <span className="relative h-10 w-10 shrink-0 sm:h-14 sm:w-14">
+                <Image
+                  alt="DevOnion brand icon"
+                  className="object-contain dark:hidden"
+                  fill
+                  src="/brand/DEVONION-LOGO.svg"
+                  sizes="56px"
+                />
+                <Image
+                  alt="DevOnion brand icon"
+                  className="hidden object-contain dark:block"
+                  fill
+                  src="/brand/DEVONION-LOGO-DARK.svg"
+                  sizes="56px"
+                />
+              </span>
+              <span className="text-5xl font-semibold tracking-tight text-bt-primary transition-colors hover:text-bt-primary-hover sm:text-6xl">
+                DevOnion
+              </span>
+            </Link>
             <div className="flex ">
               <LocaleSwitcher />
               <ThemeButton />

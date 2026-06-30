@@ -161,7 +161,7 @@ const cvContent: Record<Locale, CVContent> = {
     cta: "Pobierz CV w PDF",
     backCta: "Wróć do strony głównej",
     highlights: [
-      "Ponad 5 lat doświadczenia full stack",
+      "Ponad 5 lat doświadczenia full-stack",
       "Odpowiedzialność za backend i frontend",
       "Praca w międzynarodowych zespołach",
     ],
