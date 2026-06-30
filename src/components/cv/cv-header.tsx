@@ -2,8 +2,9 @@ import Link from "next/link";
 
 import { AnchorButton, LinkButton } from "@/components/ui/button";
 
-import { CvCollapsiblePanel } from "./cv-collapsible-panel";
 import type { CVContent, Locale } from "./cv.types";
+import { CvCollapsibleCard } from "./cv-collapsible-card";
+import clsx from "clsx";
 
 type CvHeaderProps = Readonly<{
   cv: CVContent;
@@ -13,9 +14,9 @@ type CvHeaderProps = Readonly<{
 export function CvHeader({ cv, locale }: CvHeaderProps) {
   return (
     <div className="rounded-3xl border border-border bg-bg/70 p-4 sm:p-5">
-      <div className="grid gap-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
+      <div className="grid gap-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start mb-5">
         <div className="order-2 space-y-2 sm:order-none">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-text-muted">
             {cv.contactTitle}
           </p>
           <h1 className="text-3xl font-semibold text-text sm:text-4xl">
@@ -24,7 +25,10 @@ export function CvHeader({ cv, locale }: CvHeaderProps) {
           <p className="text-base text-text-muted sm:text-lg">{cv.title}</p>
         </div>
 
-        <div className="order-1 flex flex-col items-stretch gap-2 sm:order-none sm:self-start sm:justify-self-end">
+        <div className={clsx(
+          "order-1 flex flex-col items-stretch gap-2 sm:order-none sm:self-start",
+          "sm:justify-self-end",
+        )}>
           <AnchorButton
             href="/cv/CV_WojciechZielinski_en.pdf"
             variant="primary"
@@ -43,14 +47,17 @@ export function CvHeader({ cv, locale }: CvHeaderProps) {
         </div>
       </div>
 
-      <CvCollapsiblePanel title={cv.contactDetailsTitle} defaultOpen={false} className="mt-5">
+      <CvCollapsibleCard title={cv.contactDetailsTitle}>
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
           {cv.contact.map((item) =>
             item.external ? (
               <a
                 key={item.label}
                 href={item.href}
-                className="rounded-2xl border border-border bg-card-bg px-4 py-3 transition-colors hover:bg-bg"
+                className={clsx(
+                  "rounded-2xl border border-border bg-card-bg px-4 py-3 transition-colors",
+                  "hover:bg-bg",
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -65,7 +72,10 @@ export function CvHeader({ cv, locale }: CvHeaderProps) {
               <Link
                 key={item.label}
                 href={item.href}
-                className="rounded-2xl border border-border bg-card-bg px-4 py-3 transition-colors hover:bg-bg"
+                className={clsx(
+                  "rounded-2xl border border-border bg-card-bg px-4 py-3 transition-colors",
+                  "hover:bg-bg",
+                )}
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
                   {item.label}
@@ -77,7 +87,7 @@ export function CvHeader({ cv, locale }: CvHeaderProps) {
             ),
           )}
         </div>
-      </CvCollapsiblePanel>
+      </CvCollapsibleCard>
     </div>
   );
 }

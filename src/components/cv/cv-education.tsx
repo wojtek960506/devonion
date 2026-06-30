@@ -9,7 +9,7 @@ type CvEducationProps = Readonly<{
 export function CvEducation({ title, education }: CvEducationProps) {
   return (
     <CvCollapsibleCard title={title} defaultOpen>
-      <article className="mt-3 rounded-2xl border border-border bg-card-bg p-4">
+      <article className="rounded-2xl border border-border bg-card-bg p-4">
         <h3 className="text-lg font-semibold text-text">{education.title}</h3>
         <div className="mt-1 space-y-1 text-sm text-text-muted">
           {education.rows.map((row) => (

@@ -9,7 +9,7 @@ type CvExperienceProps = Readonly<{
 export function CvExperience({ title, roles }: CvExperienceProps) {
   return (
     <CvCollapsibleCard title={title} defaultOpen>
-      <div className="mt-3 space-y-4">
+      <div className="space-y-4">
         {roles.map((role) => (
           <article
             key={`${role.organization}-${role.period}`}
