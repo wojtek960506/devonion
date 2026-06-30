@@ -18,7 +18,10 @@ export default function CvPageContent({ locale }: CvPageContentProps) {
     <section className="mx-auto w-full max-w-4xl rounded-3xl bg-card-bg p-5 shadow-sm sm:p-7">
       <div className="space-y-4">
         <CvHeader cv={cv} locale={activeLocale} />
-        <CvSummary title={cv.summaryTitle} summaryPoints={cv.summaryPoints} />
+        <CvSummary
+          title={cv.summaryTitle}
+          summaryParagraphs={cv.summaryParagraphs}
+        />
         <CvExperience title={cv.experienceTitle} roles={cv.roles} />
         <CvEducation title={cv.educationTitle} education={cv.education} />
         <CvChips title={cv.skillsTitle} items={cv.skills} />

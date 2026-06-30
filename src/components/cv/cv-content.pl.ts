@@ -39,10 +39,10 @@ export const cvContentPl: CVContent = {
   ],
   cta: "Pobierz",
   backCta: "Wróć",
-  summaryPoints: [
-    "Ponad 5 lat doświadczenia jako inżynier oprogramowania",
-    "Odpowiedzialność za backend i frontend",
-    "Praca w międzynarodowych zespołach",
+  summaryParagraphs: [
+    "Wszechstronny inżynier oprogramowania z 5-letnim doświadczeniem w rozwoju backendu (Python, Node.js, MongoDB) oraz frontendu (TypeScript, React), pracujący w międzynarodowych i interdyscyplinarnych zespołach.",
+    "Doświadczony w projektowaniu i wdrażaniu rozwiązań end-to-end, obejmujących backend, REST API oraz interfejsy frontendowe. Szybko uczę się nowych technologii i biorę odpowiedzialność za złożone funkcje.",
+    "W projektach własnych najbardziej lubię tworzyć systemy full stack pomagające ludziom porządkować dane.",
   ],
   experienceTitle: "Doświadczenie zawodowe",
   educationTitle: "Wykształcenie",

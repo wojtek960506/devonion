@@ -39,10 +39,10 @@ export const cvContentEn: CVContent = {
   ],
   cta: "Download",
   backCta: "Back",
-  summaryPoints: [
-    "5+ years of experience as software developer",
-    "Backend + frontend ownership",
-    "International product teams",
+  summaryParagraphs: [
+    "Adaptable Software Engineer with 5 years of experience in both backend (Python, Node.js, MongoDB) and frontend (TypeScript, React) development, working in international and cross-functional teams.",
+    "Skilled in designing and implementing end-to-end solutions, including backend services, REST APIs and frontend interfaces. Quick to learn new technologies and take ownership of complex features.",
+    "In my own projects, I am passionate about creating full stack systems that help people organize their data.",
   ],
   experienceTitle: "Professional experience",
   educationTitle: "Education",

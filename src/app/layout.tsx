@@ -55,12 +55,12 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} light h-full antialiased`}
       suppressHydrationWarning
     >
-      <head>
-        <Script id="theme-init" strategy="beforeInteractive">
-          {themeInitScript}
-        </Script>
-      </head>
       <body className="min-h-full flex flex-col">
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

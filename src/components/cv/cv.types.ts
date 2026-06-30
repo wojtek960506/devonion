@@ -34,7 +34,7 @@ export type CVContent = Readonly<{
   contact: ContactItem[];
   cta: string;
   backCta: string;
-  summaryPoints: string[];
+  summaryParagraphs: string[];
   experienceTitle: string;
   educationTitle: string;
   skillsTitle: string;

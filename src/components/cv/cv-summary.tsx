@@ -2,20 +2,20 @@ import { CvCollapsibleCard } from "./cv-collapsible-card";
 
 type CvSummaryProps = Readonly<{
   title: string;
-  summaryPoints: string[];
+  summaryParagraphs: string[];
 }>;
 
-export function CvSummary({ title, summaryPoints }: CvSummaryProps) {
+export function CvSummary({ title, summaryParagraphs }: CvSummaryProps) {
   return (
     <CvCollapsibleCard title={title} defaultOpen>
-      <div className="grid gap-3 text-base font-bold sm:grid-cols-3">
-        {summaryPoints.map((point) => (
-          <div
-            key={point}
-            className="rounded-2xl border border-border bg-bg px-4 py-3 text-text"
+      <div className="space-y-3 text-sm leading-7 text-text-muted sm:text-base">
+        {summaryParagraphs.map((paragraph) => (
+          <p
+            key={paragraph}
+            className="rounded-2xl border border-border bg-card-bg px-4 py-3 text-text-muted"
           >
-            {point}
-          </div>
+            {paragraph}
+          </p>
         ))}
       </div>
     </CvCollapsibleCard>
