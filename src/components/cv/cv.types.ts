@@ -14,10 +14,14 @@ export type ContactItem = Readonly<{
   external?: boolean;
 }>;
 
+export type EducationRow = Readonly<{
+  label: string;
+  value: string;
+}>;
+
 export type Education = Readonly<{
   title: string;
-  institution: string;
-  period: string;
+  rows: EducationRow[];
   bullets: string[];
 }>;
 

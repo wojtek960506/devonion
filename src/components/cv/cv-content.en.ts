@@ -49,8 +49,16 @@ export const cvContentEn: CVContent = {
   roles: cvRolesEn,
   education: {
     title: "Bachelor of Engineering, Computer Science",
-    institution: "Warsaw University of Technology",
-    period: "2016 - 2020",
+    rows: [
+      {
+        label: "Institution",
+        value: "Warsaw University of Technology",
+      },
+      {
+        label: "Period",
+        value: "2016 - 2020",
+      },
+    ],
     bullets: [
       "Algorithms and Data Structures, Information Systems Engineering, Database Systems",
       "2 semesters at Czech Technical University in Prague via Erasmus+",

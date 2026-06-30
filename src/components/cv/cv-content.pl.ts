@@ -49,8 +49,16 @@ export const cvContentPl: CVContent = {
   roles: cvRolesPl,
   education: {
     title: "Inżynier, Informatyka",
-    institution: "Politechnika Warszawska",
-    period: "2016 - 2020",
+    rows: [
+      {
+        label: "Uczelnia",
+        value: "Politechnika Warszawska",
+      },
+      {
+        label: "Okres",
+        value: "2016 - 2020",
+      },
+    ],
     bullets: [
       "Algorytmy i struktury danych, inżynieria systemów informacyjnych, bazy danych",
       "2 semestry na Czech Technical University w Pradze w ramach programu Erasmus+",
