@@ -2,7 +2,7 @@ import { cvContent } from "./cv-content";
 import { CvEducation } from "./cv-education";
 import { CvExperience } from "./cv-experience";
 import { CvHeader } from "./cv-header";
-import { CvHighlights } from "./cv-highlights";
+import { CvSummary } from "./cv-summary";
 import { CvSkillsInterests } from "./cv-skills-interests";
 import type { Locale } from "./cv.types";
 
@@ -18,9 +18,9 @@ export default function CvPageContent({ locale }: CvPageContentProps) {
     <section className="mx-auto w-full max-w-4xl rounded-3xl bg-card-bg p-5 shadow-sm sm:p-7">
       <div className="space-y-6">
         <CvHeader cv={cv} locale={activeLocale} />
-        <CvHighlights highlights={cv.highlights} />
+        <CvSummary title={cv.summaryTitle} summaryPoints={cv.summaryPoints} />
         <CvExperience title={cv.experienceTitle} roles={cv.roles} />
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="space-y-4">
           <CvEducation title={cv.educationTitle} education={cv.education} />
           <CvSkillsInterests
             skillsTitle={cv.skillsTitle}

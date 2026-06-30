@@ -1,4 +1,5 @@
 import type { CVContent } from "./cv.types";
+import { CvCollapsibleCard } from "./cv-collapsible-card";
 
 type CvSkillsInterestsProps = Readonly<{
   skillsTitle: CVContent["skillsTitle"];
@@ -30,23 +31,17 @@ export function CvSkillsInterests({
 }: CvSkillsInterestsProps) {
   return (
     <div className="space-y-4">
-      <section className="rounded-3xl border border-border bg-bg/70 p-4 sm:p-5">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
-          {skillsTitle}
-        </p>
-        <div className="mt-4">
+      <CvCollapsibleCard title={skillsTitle} defaultOpen>
+        <div className="mt-3">
           <ChipList items={skills} />
         </div>
-      </section>
+      </CvCollapsibleCard>
 
-      <section className="rounded-3xl border border-border bg-bg/70 p-4 sm:p-5">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
-          {interestsTitle}
-        </p>
-        <div className="mt-4">
+      <CvCollapsibleCard title={interestsTitle} defaultOpen>
+        <div className="mt-3">
           <ChipList items={interests} />
         </div>
-      </section>
+      </CvCollapsibleCard>
     </div>
   );
 }

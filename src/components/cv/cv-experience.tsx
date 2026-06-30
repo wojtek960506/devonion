@@ -1,4 +1,5 @@
 import type { CVContent } from "./cv.types";
+import { CvCollapsibleCard } from "./cv-collapsible-card";
 
 type CvExperienceProps = Readonly<{
   title: CVContent["experienceTitle"];
@@ -7,12 +8,8 @@ type CvExperienceProps = Readonly<{
 
 export function CvExperience({ title, roles }: CvExperienceProps) {
   return (
-    <section className="rounded-3xl border border-border bg-bg/70 p-4 sm:p-5">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
-        {title}
-      </p>
-
-      <div className="mt-5 space-y-4">
+    <CvCollapsibleCard title={title} defaultOpen>
+      <div className="mt-3 space-y-4">
         {roles.map((role) => (
           <article
             key={`${role.organization}-${role.period}`}
@@ -37,6 +34,6 @@ export function CvExperience({ title, roles }: CvExperienceProps) {
           </article>
         ))}
       </div>
-    </section>
+    </CvCollapsibleCard>
   );
 }

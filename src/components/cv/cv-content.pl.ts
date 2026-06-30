@@ -5,6 +5,8 @@ export const cvContentPl: CVContent = {
   name: "Wojciech Zieliński",
   title: "Full Stack Developer",
   contactTitle: "Curriculum Vitae",
+  contactDetailsTitle: "Dane kontaktowe",
+  summaryTitle: "Podsumowanie",
   contact: [
     {
       label: "E-mail",
@@ -37,7 +39,7 @@ export const cvContentPl: CVContent = {
   ],
   cta: "Pobierz",
   backCta: "Wróć",
-  highlights: [
+  summaryPoints: [
     "Ponad 5 lat doświadczenia jako inżynier oprogramowania",
     "Odpowiedzialność za backend i frontend",
     "Praca w międzynarodowych zespołach",

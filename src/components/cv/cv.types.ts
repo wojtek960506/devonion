@@ -29,10 +29,12 @@ export type CVContent = Readonly<{
   name: string;
   title: string;
   contactTitle: string;
+  contactDetailsTitle: string;
+  summaryTitle: string;
   contact: ContactItem[];
   cta: string;
   backCta: string;
-  highlights: string[];
+  summaryPoints: string[];
   experienceTitle: string;
   educationTitle: string;
   skillsTitle: string;

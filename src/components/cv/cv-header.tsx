@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { AnchorButton, LinkButton } from "@/components/ui/button";
 
+import { CvCollapsiblePanel } from "./cv-collapsible-panel";
 import type { CVContent, Locale } from "./cv.types";
 
 type CvHeaderProps = Readonly<{
@@ -42,39 +43,41 @@ export function CvHeader({ cv, locale }: CvHeaderProps) {
         </div>
       </div>
 
-      <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-        {cv.contact.map((item) =>
-          item.external ? (
-            <a
-              key={item.label}
-              href={item.href}
-              className="rounded-2xl border border-border bg-card-bg px-4 py-3 transition-colors hover:bg-bg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
-                {item.label}
-              </p>
-              <p className="mt-1 break-words text-sm font-medium text-text">
-                {item.value}
-              </p>
-            </a>
-          ) : (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="rounded-2xl border border-border bg-card-bg px-4 py-3 transition-colors hover:bg-bg"
-            >
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
-                {item.label}
-              </p>
-              <p className="mt-1 break-words text-sm font-medium text-text">
-                {item.value}
-              </p>
-            </Link>
-          ),
-        )}
-      </div>
+      <CvCollapsiblePanel title={cv.contactDetailsTitle} defaultOpen={false} className="mt-5">
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          {cv.contact.map((item) =>
+            item.external ? (
+              <a
+                key={item.label}
+                href={item.href}
+                className="rounded-2xl border border-border bg-card-bg px-4 py-3 transition-colors hover:bg-bg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
+                  {item.label}
+                </p>
+                <p className="mt-1 break-words text-sm font-medium text-text">
+                  {item.value}
+                </p>
+              </a>
+            ) : (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="rounded-2xl border border-border bg-card-bg px-4 py-3 transition-colors hover:bg-bg"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
+                  {item.label}
+                </p>
+                <p className="mt-1 break-words text-sm font-medium text-text">
+                  {item.value}
+                </p>
+              </Link>
+            ),
+          )}
+        </div>
+      </CvCollapsiblePanel>
     </div>
   );
 }

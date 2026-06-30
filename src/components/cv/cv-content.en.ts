@@ -5,6 +5,8 @@ export const cvContentEn: CVContent = {
   name: "Wojciech Zieliński",
   title: "Full Stack Developer",
   contactTitle: "Curriculum Vitae",
+  contactDetailsTitle: "Contact details",
+  summaryTitle: "Summary",
   contact: [
     {
       label: "Email",
@@ -37,7 +39,7 @@ export const cvContentEn: CVContent = {
   ],
   cta: "Download",
   backCta: "Back",
-  highlights: [
+  summaryPoints: [
     "5+ years of experience as software developer",
     "Backend + frontend ownership",
     "International product teams",
