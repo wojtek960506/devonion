@@ -10,6 +10,7 @@ type CollapsibleTriggerProps = {
   indicatorPosition: 'left' | 'right';
   triggerMode: 'split' | 'full-row';
   triggerClassName?: string;
+  hoverEffect?: 'background' | 'text' | 'both';
   onToggle: () => void;
   contentId: string;
 };
@@ -23,11 +24,14 @@ export const CollapsibleTrigger = ({
   indicatorPosition,
   triggerMode,
   triggerClassName,
+  hoverEffect = 'background',
   onToggle,
   contentId,
 }: CollapsibleTriggerProps) => {
   const isIndicatorLeft = indicatorPosition === 'left';
   const isFullRowTrigger = triggerMode === 'full-row';
+  const isBackgroundHoverEnabled =
+    hoverEffect === 'background' || hoverEffect === 'both';
   const SplitTriggerIcon = isIndicatorLeft ? ChevronRight : ChevronLeft;
   const FullRowTriggerIcon = ChevronDown;
   const buttonProps = {
@@ -43,7 +47,12 @@ export const CollapsibleTrigger = ({
     return (
       <Button
         {...buttonProps}
-        className={clsx('w-full min-w-0', isIndicatorLeft ? '' : 'flex-row-reverse', triggerClassName)}
+        className={clsx(
+          'group w-full min-w-0',
+          isIndicatorLeft ? '' : 'flex-row-reverse',
+          !isBackgroundHoverEnabled && 'hover:bg-transparent',
+          triggerClassName,
+        )}
       >
         <div
           className={clsx(
@@ -52,9 +61,9 @@ export const CollapsibleTrigger = ({
           )}
         >
           <FullRowTriggerIcon
-            className={clsx(ICON_CLASS_NAME, actualIsOpen && 'rotate-180')}
+            className={clsx(ICON_CLASS_NAME, actualIsOpen && 'text-text', actualIsOpen && 'rotate-180')}
           />
-          {header}
+          <span className="min-w-0">{header}</span>
         </div>
       </Button>
     );
@@ -63,15 +72,17 @@ export const CollapsibleTrigger = ({
   return (
     <div
       className={clsx(
-        'flex w-full min-w-0 items-center',
+        'group flex w-full min-w-0 items-center',
         isIndicatorLeft ? '' : 'flex-row-reverse',
         triggerClassName,
       )}
     >
       <Button {...buttonProps}>
-        <SplitTriggerIcon className={clsx(ICON_CLASS_NAME, actualIsOpen && (isIndicatorLeft ? 'rotate-90' : '-rotate-90'))} />
+        <SplitTriggerIcon
+          className={clsx(ICON_CLASS_NAME, actualIsOpen && 'text-text', actualIsOpen && (isIndicatorLeft ? 'rotate-90' : '-rotate-90'))}
+        />
       </Button>
-      {header}
+      <span className="min-w-0">{header}</span>
     </div>
   );
 };

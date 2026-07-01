@@ -16,6 +16,7 @@ type CollapsibleProps = {
   contentInset?: 'default' | 'none';
   triggerClassName?: string;
   contentClassName?: string;
+  hoverEffect?: 'background' | 'text' | 'both';
 };
 
 export const Collapsible = ({
@@ -29,6 +30,7 @@ export const Collapsible = ({
   contentInset = 'default',
   triggerClassName,
   contentClassName,
+  hoverEffect = 'background',
 }: CollapsibleProps) => {
   const [uncontrolledIsOpen, setUncontrolledIsOpen] = useState(isInitiallyOpen ?? false);
   const [isClosing, setIsClosing] = useState(false);
@@ -52,6 +54,7 @@ export const Collapsible = ({
         indicatorPosition={indicatorPosition}
         triggerMode={triggerMode}
         triggerClassName={triggerClassName}
+        hoverEffect={hoverEffect}
         onToggle={handleToggle}
         contentId={contentId}
       />
