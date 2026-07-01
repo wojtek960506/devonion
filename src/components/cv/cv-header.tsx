@@ -4,6 +4,7 @@ import { AnchorButton, LinkButton } from "@/components/ui/button";
 
 import type { CVContent, Locale } from "./cv.types";
 import { CvCollapsibleCard } from "./cv-collapsible-card";
+import { CvSectionTitle } from "./cv-section-title";
 import clsx from "clsx";
 
 type CvHeaderProps = Readonly<{
@@ -16,9 +17,7 @@ export function CvHeader({ cv, locale }: CvHeaderProps) {
     <div className="rounded-3xl border border-border bg-bg/70 p-4 sm:p-5">
       <div className="grid gap-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start mb-5">
         <div className="order-2 space-y-2 sm:order-none">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-text-muted">
-            {cv.contactTitle}
-          </p>
+          <CvSectionTitle title={cv.contactTitle} as="h2" />
           <h1 className="text-3xl font-semibold text-text sm:text-4xl">
             {cv.name}
           </h1>

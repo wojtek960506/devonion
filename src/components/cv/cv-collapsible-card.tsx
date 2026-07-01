@@ -7,6 +7,7 @@ import {
   CV_COLLAPSIBLE_CONTENT_CLASS_NAME,
   CV_COLLAPSIBLE_TRIGGER_CLASS_NAME,
 } from "./cv-collapsible-classes";
+import { CvSectionTitle } from "./cv-section-title";
 
 type CvCollapsibleCardProps = Readonly<{
   title: string;
@@ -25,9 +26,7 @@ export function CvCollapsibleCard({
     <div className={CV_COLLAPSIBLE_CARD_CLASS_NAME}>
       <Collapsible
         header={
-          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-text-muted">
-            {title}
-          </span>
+          <CvSectionTitle title={title} />
         }
         indicatorPosition={indicatorPosition}
         triggerMode="full-row"
