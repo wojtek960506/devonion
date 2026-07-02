@@ -10,9 +10,17 @@ export type Role = Readonly<{
 export type ContactItem = Readonly<{
   label: string;
   value: string;
-  href: string;
-  external?: boolean;
-}>;
+} & (
+  | Readonly<{
+      kind: "copy";
+      copyText: string;
+    }>
+  | Readonly<{
+      kind: "link";
+      href: string;
+      external?: boolean;
+    }>
+)>; 
 
 export type EducationRow = Readonly<{
   label: string;

@@ -9,28 +9,39 @@ export const cvContentEn: CVContent = {
   summaryTitle: "Summary",
   contact: [
     {
+      kind: "copy",
       label: "Email",
       value: "wojtekzielinski96@gmail.com",
-      href: "mailto:wojtekzielinski96@gmail.com",
+      copyText: "wojtekzielinski96@gmail.com",
     },
     {
+      kind: "copy",
       label: "Phone",
       value: "+48 783 781 370",
-      href: "tel:+48783781370",
+      copyText: "+48783781370",
     },
     {
+      kind: "copy",
+      label: "City",
+      value: "Cracow, Poland",
+      copyText: "Cracow, Poland",
+    },
+    {
+      kind: "link",
       label: "GitHub",
       value: "github.com/wojtek960506",
       href: "https://github.com/wojtek960506",
       external: true,
     },
     {
+      kind: "link",
       label: "LinkedIn",
-      value: "linkedin.com/in/wojciech-zieliński",
-      href: "https://www.linkedin.com/in/wojciech-zieli%C5%84ski-782297240/",
+      value: "linkedin.com/in/wojciech-zielinski-69944b159",
+      href: "https://www.linkedin.com/in/wojciech-zielinski-69944b159/",
       external: true,
     },
     {
+      kind: "link",
       label: "Portfolio",
       value: "devonion.com",
       href: "https://devonion.com",
