@@ -2,6 +2,17 @@ import type { Role } from "./cv.types";
 
 export const cvRolesEn: Role[] = [
   {
+    title: "Full Stack Developer",
+    organization: "Sufler AI",
+    period: "04.2026 - present",
+    bullets: [
+      "Joined an existing AI assistant product and took ownership of frontend and API-layer improvements, focusing on polishing and extending the app",
+      "Building and refining React and TypeScript UI flows for authentication, session handling, user and admin views, document management, and session details",
+      "Working on enhancing API layer functionality using FastAPI and PostgreSQL",
+      "Improving real-time communication and integration between the frontend and backend through WebSocket-based audio and message flows",
+    ],
+  },
+  {
     title: "Software Engineer",
     organization: "Personal Project (Finance Tracker)",
     period: "10.2025 - present",
