@@ -35,7 +35,7 @@ export function CvHeader({ cv, locale }: CvHeaderProps) {
           )}
         >
           <AnchorButton
-            href="/cv/CV_WojciechZielinski_en.pdf"
+            href={`/cv/${cv.cvFileName}`}
             variant="primary"
             className="w-full font-semibold text-bg sm:w-auto"
             download

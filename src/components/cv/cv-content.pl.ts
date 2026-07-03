@@ -48,6 +48,7 @@ export const cvContentPl: CVContent = {
       external: true,
     },
   ],
+  cvFileName: "CV_WojciechZielinski_pl.pdf",
   cta: "Pobierz",
   backCta: "Wróć",
   summaryParagraphs: [

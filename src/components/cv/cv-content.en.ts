@@ -48,6 +48,7 @@ export const cvContentEn: CVContent = {
       external: true,
     },
   ],
+  cvFileName: "CV_WojciechZielinski_en.pdf",
   cta: "Download",
   backCta: "Back",
   summaryParagraphs: [

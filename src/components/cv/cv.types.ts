@@ -40,6 +40,7 @@ export type CVContent = Readonly<{
   contactDetailsTitle: string;
   summaryTitle: string;
   contact: ContactItem[];
+  cvFileName: string;
   cta: string;
   backCta: string;
   summaryParagraphs: string[];

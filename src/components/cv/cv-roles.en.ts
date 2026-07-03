@@ -14,7 +14,7 @@ export const cvRolesEn: Role[] = [
   },
   {
     title: "Software Engineer",
-    organization: "Personal Project (Finance Tracker)",
+    organization: "Personal Project (FinOnion)",
     period: "10.2025 - present",
     bullets: [
       "Designing and implementing a personal finance tracking application for learning and private use",
