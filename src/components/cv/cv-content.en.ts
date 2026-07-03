@@ -65,10 +65,12 @@ export const cvContentEn: CVContent = {
     title: "Bachelor of Engineering, Computer Science",
     rows: [
       {
+        id: "institution",
         label: "Institution",
         value: "Warsaw University of Technology",
       },
       {
+        id: "period",
         label: "Period",
         value: "2016 - 2020",
       },

@@ -23,6 +23,7 @@ export type ContactItem = Readonly<{
 )>; 
 
 export type EducationRow = Readonly<{
+  id: string;
   label: string;
   value: string;
 }>;

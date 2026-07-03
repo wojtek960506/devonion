@@ -65,10 +65,12 @@ export const cvContentPl: CVContent = {
     title: "Inżynier, Informatyka",
     rows: [
       {
+        id: "institution",
         label: "Uczelnia",
         value: "Politechnika Warszawska",
       },
       {
+        id: "period",
         label: "Okres",
         value: "2016 - 2020",
       },
