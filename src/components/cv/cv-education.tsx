@@ -10,8 +10,8 @@ export function CvEducation({ title, education }: CvEducationProps) {
   return (
     <CvCollapsibleCard title={title} defaultOpen>
       <article className="rounded-2xl border border-border bg-card-bg p-4">
-        <h3 className="text-lg font-semibold text-text">{education.title}</h3>
-        <div className="mt-1 space-y-1 text-sm text-text-muted">
+        <h3 className="text-xl font-semibold text-text">{education.title}</h3>
+        <div className="mt-1 space-y-1 text-base text-text-muted">
           {education.rows.map((row) => (
             <p key={row.label}>
               <span className="font-semibold text-text">{row.label}:</span>{" "}
@@ -20,7 +20,7 @@ export function CvEducation({ title, education }: CvEducationProps) {
           ))}
         </div>
 
-        <ul className="mt-4 space-y-2 text-sm leading-6 text-text-muted">
+        <ul className="mt-4 space-y-2 text-base leading-6 text-text-muted">
           {education.bullets.map((bullet) => (
             <li key={bullet} className="flex gap-3">
               <span className="mt-2 h-1.5 w-1.5 rounded-full bg-fg/70" />

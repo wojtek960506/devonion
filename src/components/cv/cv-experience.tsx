@@ -17,13 +17,13 @@ export function CvExperience({ title, roles }: CvExperienceProps) {
           >
             <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
               <div>
-                <p className="text-lg font-semibold text-text">{role.title}</p>
-                <p className="text-sm text-text-muted">{role.organization}</p>
+                <p className="text-xl font-semibold text-text">{role.title}</p>
+                <p className="text-base text-text-muted">{role.organization}</p>
               </div>
-              <p className="text-sm font-medium text-text-muted">{role.period}</p>
+              <p className="text-base font-medium text-text-muted">{role.period}</p>
             </div>
 
-            <ul className="mt-4 space-y-2 text-sm leading-6 text-text-muted">
+            <ul className="mt-4 space-y-2 text-base leading-6 text-text-muted">
               {role.bullets.map((bullet) => (
                 <li key={bullet} className="flex gap-3">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-fg/70" />
