@@ -12,7 +12,7 @@ function ChipList({ items }: Readonly<{ items: string[] }>) {
       {items.map((item) => (
         <li
           key={item}
-          className="rounded-full border border-border bg-card-bg px-3 py-1 text-sm text-text-muted"
+          className="rounded-full border border-border bg-bg/70 px-3 py-1 text-sm text-text-muted"
         >
           {item}
         </li>

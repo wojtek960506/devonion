@@ -18,7 +18,7 @@ export function CvHeader({ cv, locale }: CvHeaderProps) {
   const { copiedContact, handleCopy } = useCopiedContact();
 
   return (
-    <div className="rounded-3xl border border-border bg-bg/70 p-4 sm:p-5">
+    <div className="rounded-3xl border border-border bg-card-bg p-4 sm:p-5">
       <div className="mb-5 grid gap-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
         <div className="order-2 space-y-2 sm:order-none">
           <CvSectionTitle title={cv.contactTitle} as="h2" />

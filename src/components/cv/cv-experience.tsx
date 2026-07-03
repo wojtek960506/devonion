@@ -13,7 +13,7 @@ export function CvExperience({ title, roles }: CvExperienceProps) {
         {roles.map((role) => (
           <article
             key={`${role.organization}-${role.period}`}
-            className="rounded-2xl border border-border bg-card-bg p-4"
+            className="rounded-2xl border border-border bg-bg/70 p-4"
           >
             <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
               <div>
