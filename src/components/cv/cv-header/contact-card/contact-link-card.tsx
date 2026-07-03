@@ -26,7 +26,7 @@ export function ContactLinkCard({
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
           {label}
         </p>
-        <p className="mt-1 break-words text-sm font-medium text-text">
+        <p className="mt-1 min-w-0 break-all text-sm font-medium text-text">
           {value}
         </p>
       </a>
@@ -38,7 +38,7 @@ export function ContactLinkCard({
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
         {label}
       </p>
-      <p className="mt-1 break-words text-sm font-medium text-text">
+      <p className="mt-1 min-w-0 break-all text-sm font-medium text-text">
         {value}
       </p>
     </Link>
