@@ -1,0 +1,55 @@
+export type Locale = "en" | "pl";
+
+export type Role = Readonly<{
+  title: string;
+  organization: string;
+  period: string;
+  bullets: string[];
+}>;
+
+export type ContactItem = Readonly<{
+  label: string;
+  value: string;
+} & (
+  | Readonly<{
+      kind: "copy";
+      copyText: string;
+    }>
+  | Readonly<{
+      kind: "link";
+      href: string;
+      external?: boolean;
+    }>
+)>; 
+
+export type EducationRow = Readonly<{
+  label: string;
+  value: string;
+}>;
+
+export type Education = Readonly<{
+  title: string;
+  rows: EducationRow[];
+  bullets: string[];
+}>;
+
+export type CVContent = Readonly<{
+  name: string;
+  title: string;
+  contactTitle: string;
+  contactDetailsTitle: string;
+  summaryTitle: string;
+  contact: ContactItem[];
+  cvFileName: string;
+  cta: string;
+  backCta: string;
+  summaryParagraphs: string[];
+  experienceTitle: string;
+  educationTitle: string;
+  skillsTitle: string;
+  interestsTitle: string;
+  roles: Role[];
+  education: Education;
+  skills: string[];
+  interests: string[];
+}>;

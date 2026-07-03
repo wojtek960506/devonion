@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import clsx from "clsx";
-import { AnchorButton } from "@/components/ui/button";
+import { AnchorButton, LinkButton } from "@/components/ui/button";
 
 type HomePageProps = Readonly<{
   params: Promise<{ locale: string }>;
@@ -22,28 +21,7 @@ export default async function HomePage({ params }: HomePageProps) {
             {t("title")}
           </h1>
 
-          <div className="flow-root">
-            <div className={clsx(
-              "float-right mb-2 ml-4 w-28 rounded-3xl border border-border bg-bg px-2 py-2 sm:w-56"
-            )}>
-              <Image
-                alt="DevOnion main logo"
-                className="block h-auto w-full object-contain dark:hidden"
-                height={180}
-                src="/brand/DEVONION-LOGO.svg"
-                unoptimized
-                width={180}
-              />
-              <Image
-                alt="DevOnion main logo"
-                className="hidden h-auto w-full object-contain dark:block"
-                height={180}
-                src="/brand/DEVONION-LOGO-DARK.svg"
-                unoptimized
-                width={180}
-              />
-            </div>
-
+          <div>
             <p className="text-base leading-6 text-text-muted [hyphens:auto] [overflow-wrap:break-word] [text-align:justify] sm:text-xl sm:leading-7">
               {t("description")}
             </p>
@@ -59,10 +37,20 @@ export default async function HomePage({ params }: HomePageProps) {
           target="_blank"
           variant="primary"
           className="font-semibold text-bg"
-
         >
           {t("financeCta")}
         </AnchorButton>
+
+        <p className="mt-5 mb-1 sm:mb-2 text-base font-semibold text-text sm:text-lg">
+          {t("cvPrompt")}
+        </p>
+        <LinkButton
+          href={`/${locale}/cv`}
+          variant="outline"
+          className="font-semibold"
+        >
+          {t("cvCta")}
+        </LinkButton>
       </section>
     </main>
   );

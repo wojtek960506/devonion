@@ -1,8 +1,10 @@
 {
   "HomePage": {
-    "title": "Cześć, jestem Wojtek.",
-    "description": "To jest pierwsza mała wersja DevOnion, czyli mojego miejsca na projekty, pomysły i eksperymenty. Skupiam się na tworzeniu systemów full stack, które pomagają użytkownikom w codziennych zadaniach, usuwają niepotrzebne tarcia i upraszczają realne procesy. Lubię budować praktyczne oprogramowanie: rozwiązania, które są czytelne, solidne i naprawdę przydatne, a nie tylko technicznie ciekawe. Poza programowaniem lubię różne aktywności: górskie wędrówki, wspinaczkę, jazdę na rowerze, kalistenikę, przejażdżki motocyklem i grę na pianinie.",
+    "title": "Cześć, jestem Wojciech Zieliński.",
+    "description": "DevOnion to moje osobiste miejsce na projekty, pomysły i eksperymenty. Skupiam się na tworzeniu systemów full-stack, które pomagają użytkownikom w codziennych zadaniach, usuwają niepotrzebne tarcia i upraszczają realne procesy. Lubię budować praktyczne oprogramowanie: rozwiązania, które są czytelne, solidne i naprawdę przydatne, a nie tylko technicznie ciekawe. Poza programowaniem lubię różne aktywności: górskie wędrówki, wspinaczkę, jazdę na rowerze, kalistenikę, przejażdżki motocyklem i grę na pianinie.",
     "financePrompt": "Sprawdź mój pierwszy projekt.",
-    "financeCta": "Otwórz Śledzik Finansowy"
+    "financeCta": "Otwórz FinOnion",
+    "cvPrompt": "Chcesz zobaczyć pełne doświadczenie?",
+    "cvCta": "Zobacz moje doświadczenie"
   }
 }

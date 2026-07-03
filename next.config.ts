@@ -1,12 +1,7 @@
 import createNextIntlPlugin from "next-intl/plugin";
 import type { NextConfig } from "next";
-import path from "node:path";
 
-const nextConfig: NextConfig = {
-  turbopack: {
-    root: path.join(__dirname),
-  },
-};
+const nextConfig: NextConfig = {};
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
